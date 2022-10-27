@@ -147,6 +147,7 @@ input,button{
     display: none;
 }
 @media (max-width: 768px) {
-.information { text-align: center;
-}
+    .information { 
+        text-align: center;
+    }
 }
