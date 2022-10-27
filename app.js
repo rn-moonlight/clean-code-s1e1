@@ -10,8 +10,8 @@
 
 let taskInput=document.getElementById("new-task");//Add a new task.
 let addButton=document.getElementsByTagName("button")[0];//first button
-let incompleteTaskHolder=document.querySelector(".check-items__list");//ul of #incompleteTasks
-let completedTasksHolder=document.querySelector(".completed-items__list");//completed-tasks
+let incompleteTaskHolder=document.querySelector(".check-items__list");//ul from check-items section
+let completedTasksHolder=document.querySelector(".completed-items__list");//ul from completed-items section
 
 
 //New task list item
@@ -144,7 +144,7 @@ let taskCompleted=function(){
 
 let taskIncomplete=function(){
     console.log("Incomplete Task...");
-//Mark task as incomplete.
+    //Mark task as incomplete.
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     let listItem=this.parentNode;
