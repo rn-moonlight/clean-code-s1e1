@@ -91,9 +91,9 @@ let editTask = function() {
     let label = listItem.querySelector(".task-label");
     let editBtn = listItem.querySelector(".item__btn-edit");
     let containsClass = listItem.classList.contains("item-edit");
-    //If class of the parent is .editmode
+    //If class of the parent is .item-edit
     if (containsClass) {
-        //switch to .editmode
+        //switch to .item-edit
         //label becomes the inputs value.
         label.innerText = editInput.value;
         editBtn.innerText = "Edit";
@@ -106,7 +106,7 @@ let editTask = function() {
         label.classList.add("item-edit__task");
     }
 
-    //toggle .editmode on the parent.
+    //toggle .item-edit on the parent.
     listItem.classList.toggle("item-edit");
 };
 
@@ -126,7 +126,7 @@ let deleteTask = function() {
 let taskCompleted = function() {
     console.log("Complete Task...");
 
-    //Append the task list item to the #completed-tasks
+    //Append the task list item to the .completed-items__list
     let listItem = this.parentNode;
 
     let editInput = listItem.querySelector(".task-input");
@@ -143,7 +143,7 @@ let taskIncomplete = function(){
     console.log("Incomplete Task...");
     //Mark task as incomplete.
     //When the checkbox is unchecked
-    //Append the task list item to the #incompleteTasks.
+    //Append the task list item to the .check-items__list
     let listItem = this.parentNode;
 
     let editInput = listItem.querySelector(".task-input");
@@ -172,7 +172,7 @@ addButton.addEventListener("click", ajaxRequest);
 
 let bindTaskEvents = function(taskListItem,checkBoxEventHandler) {
     console.log("bind list item events");
-//select ListItems children
+    //select ListItems children
     let checkBox = taskListItem.querySelector(".item__checkbox");
     let editButton = taskListItem.querySelector(".item__btn-edit");
     let deleteButton = taskListItem.querySelector(".item__btn-delete");
