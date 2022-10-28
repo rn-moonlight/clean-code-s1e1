@@ -37,18 +37,19 @@
   display: flex;
 }
 
-ul {
+.list {
   margin: 0;
   padding: 0px;
 }
 
-li, 
-h3 {
+.item, 
+.title {
   list-style: none;
 }
 
-input,
-button {
+.task-input,
+.item__checkbox,
+.btn {
   outline: none;
 }
 
